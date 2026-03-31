@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+* { padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+     
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(6,18,23);
+    background: linear-gradient(90deg, rgba(6,18,23,1) 13%, rgba(13,36,47,1) 28%, rgba(34,91,117,1) 100%);
+}
+
+.container {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+}
+
+.form-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d242f;
+    padding: 1rem;
+    border-radius: 8px 0 0 8px;
+}
+
+.form-image img {
+    width: 30rem;
+}
+
+.form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 0 8px 8px 0;
+    position: relative;
+}
+
+.form-header {
+    margin-bottom: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.form-header .title {
+    text-align: left;
+    display: inline-block;
+}
+
+.form-header h1 {
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.form-header h1:after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background: rgb(6,18,23);
+    background: linear-gradient(90deg, rgba(6,18,23,1) 13%, rgba(13,36,47,1) 28%, rgba(34,91,117,1) 100%);
+    margin: 0.8rem 0 0 0;
+    border-radius: 10px;
+}
+
+.form-header p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.email-display {
+    color: #2f7fa4;
+    font-weight: 700;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+    position: relative;
+}
+
+.code_inputs {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.code_inputs input {
+    box-sizing: border-box;
+    width: 64px;
+    height: 64px;
+    padding: 0 !important;
+    border-radius: 10px;
+    border: 1.5px solid #e6e6e6;
+    background: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+    cursor: text;
+    transition: all 0.3s ease;
+}
+
+.code_inputs input:focus {
+    border-color: #2f7fa4;
+    box-shadow: 0 8px 20px rgba(47,127,164,0.16);
+}
+
+.code_inputs input::-webkit-outer-spin-button,
+.code_inputs input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.code_inputs input::placeholder {
+    color: #cfcfcf;
+}
+
+.confirm-button {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.confirm-button button {
+    width: 50%;
+    margin-left: 25%;
+    border: none;
+    background-color: #225b75;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.93rem;
+    font-weight: 400;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.confirm-button button:hover {
+    background: #2f7fa4;
+}
+
+.resend-code {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.resend-code a {
+    color: #2f7fa4;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.resend-code a:hover {
+    color: #225b75;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1330px) {
+    .form-image {
+        display: none;
+    }
+    
+    .container {
+        width: 50%;
+    }
+    
+    .form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+    
+    .input-group {
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
+    }
+  }
+
+@media screen and (max-width: 420px) {
+    .code_inputs {
+        gap: 10px;
+    }
+    .code_inputs input {
+        width: 52px;
+        height: 52px;
+        font-size: 24px;
+    }
+}
